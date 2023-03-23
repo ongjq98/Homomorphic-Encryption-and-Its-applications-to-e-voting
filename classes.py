@@ -143,14 +143,14 @@ class LoginPageController:
         account_sid = 'AC4fe73199e1fc12a01e04f1ddb53c18c3' 
         auth_token = '55efccda2ef34ba35881eb256df476ae' 
         client = Client(account_sid, auth_token) 
-        
+        """
         message = client.messages.create(  
                                     messaging_service_sid='MGf788a76f1546ed9cbf819f1ab5ba9f44', 
                                     body=f'Your OTP IS {otp}',      
                                     to=f'+65{self.entity.OTPPhoneNumber}' 
                                 ) 
         
-        print(message)
+        print(message)"""
 
     def register(self,username,password,nric,name,postal_code,address,number):
         return self.entity.registerVoter(username,password,nric,name,postal_code,address,number)
